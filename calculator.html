@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!----------------Favicon-------------------->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://png.pngtree.com/png-vector/20211110/ourmid/pngtree-drop-of-water-3d-illustration-icon-png-image_4025982.png"
+    /><!-------------------------------------------->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="Project.css" />
+    <title>Water Management</title>
+    <meta name="description" content="Water Management And Its Methods" />
+    <!------------Google Font---------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!--------------Font awesome cdn------------------------>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>JavaScript Calculator</title> 
+    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+        integrity= 
+"sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script> 
+    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+        integrity= 
+"sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script> 
+    
+    <!-- For styling -->
+    <style> 
+        table { 
+            border: 1px solid black; 
+            margin-left: auto; 
+            margin-right: auto; 
+        } 
+  
+        input[type="button"] { 
+            width: 100%; 
+            padding: 20px 40px; 
+            background-color: white; 
+            color: black; 
+            font-size: 24px; 
+            font-weight: bold; 
+            border: none; 
+            border-radius: 5px; 
+        } 
+  
+        input[type="text"] { 
+            padding: 20px 30px; 
+            font-size: 24px; 
+            font-weight: bold; 
+            border: none; 
+            border-radius: 5px; 
+            border: 2px solid black; 
+        } 
+    </style>
+    
+  </head>
+<body>
+    <div class="main">
+        <div class="header ">
+          <section>
+          <!------------------Nav Links------------>          
+          <nav>
+              <div class="nav-links">
+                <ul class="list">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="calculator.html">Water Consumption Calculator</a></li>
+                  <li><a href="Methods.html">Methods</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="Contact_Us.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </nav>
+            <hr>
+            <h1 style="color: white; padding-left: 1%; font-size: xx-large; padding-top: 1%;">Check Your Water Consumption and how you can reduce it.</h1>
+            
+            <h2 style="color: white; font-size: x-large; padding-left: 1%; padding-top: 1%;"><u>Steps:</u></h2>
+            <ol style="color: white; padding-left: 2%;">
+                <li>Enter all your daily water usage.</li>
+                <li>Add your daily water consumption using our calculator.</li>
+                <li>If your water usage at home is exceeding 50 litres per day at your home. Implement these steps:
+                    <ul>
+                        <li>Thrift and mend your clothes</li>
+                        <li>Install low-flow fixtures</li>
+                        <li>Aerate your lawn</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <table id="calcu"> 
+                <tr> 
+                    <td colspan="3"><input type="text" id="result"></td> 
+                    <td><input type="button" value="c" onclick="clr()" /> </td> 
+                </tr> 
+                <tr> 
+                    <td><input type="button" value="1" onclick="dis('1')"
+                                onkeydown="myFunction(event)"> </td> 
+                    <td><input type="button" value="2" onclick="dis('2')"
+                                onkeydown="myFunction(event)"> </td> 
+                    <td><input type="button" value="3" onclick="dis('3')"
+                                onkeydown="myFunction(event)"> </td> 
+                    <td><input type="button" value="/" onclick="dis('/')"
+                                onkeydown="myFunction(event)"> </td> 
+                </tr> 
+                <tr> 
+                    <td><input type="button" value="4" onclick="dis('4')"
+                                onkeydown="myFunction(event)"> </td> 
+                    <td><input type="button" value="5" onclick="dis('5')"
+                                onkeydown="myFunction(event)"> </td> 
+                    <td><input type="button" value="6" onclick="dis('6')"
+                                onkeydown="myFunction(event)"> </td> 
+                    <td><input type="button" value="*" onclick="dis('*')"
+                                onkeydown="myFunction(event)"> </td> 
+                </tr> 
+                <tr> 
+                    <td><input type="button" value="7" onclick="dis('7')"
+                                onkeydown="myFunction(event)"> </td> 
+                    <td><input type="button" value="8" onclick="dis('8')"
+                                onkeydown="myFunction(event)"> </td> 
+                    <td><input type="button" value="9" onclick="dis('9')"
+                                onkeydown="myFunction(event)"> </td> 
+                    <td><input type="button" value="-" onclick="dis('-')"
+                                onkeydown="myFunction(event)"> </td> 
+                </tr> 
+                <tr> 
+                    <td><input type="button" value="0" onclick="dis('0')"
+                                onkeydown="myFunction(event)"> </td> 
+                    <td><input type="button" value="." onclick="dis('.')"
+                                onkeydown="myFunction(event)"> </td> 
+                    
+                    <!-- solve function call function solve to evaluate value -->
+                    <td><input type="button" value="=" onclick="solve()"> </td> 
+          
+                    <td><input type="button" value="+" onclick="dis('+')"
+                                onkeydown="myFunction(event)"> </td> 
+                </tr> 
+            </table> 
+          
+            <script> 
+                
+                // Function that display value 
+                function dis(val) { 
+                    document.getElementById("result").value += val 
+                } 
+          
+                function myFunction(event) { 
+                    if (event.key == '0' || event.key == '1' 
+                        || event.key == '2' || event.key == '3' 
+                        || event.key == '4' || event.key == '5' 
+                        || event.key == '6' || event.key == '7' 
+                        || event.key == '8' || event.key == '9' 
+                        || event.key == '+' || event.key == '-' 
+                        || event.key == '*' || event.key == '/') 
+                        document.getElementById("result").value += event.key; 
+                } 
+          
+                var cal = document.getElementById("calcu"); 
+                cal.onkeyup = function (event) { 
+                    if (event.keyCode === 13) { 
+                        console.log("Enter"); 
+                        let x = document.getElementById("result").value 
+                        console.log(x); 
+                        solve(); 
+                    } 
+                } 
+          
+                // Function that evaluates the digit and return result 
+                function solve() { 
+                    let x = document.getElementById("result").value 
+                    let y = math.evaluate(x) 
+                    document.getElementById("result").value = y 
+                } 
+          
+                // Function that clear the display 
+                function clr() { 
+                    document.getElementById("result").value = "" 
+                } 
+            </script> 
+</body>
+</html>
